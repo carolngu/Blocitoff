@@ -5,6 +5,6 @@
 </div>
 <% end %>
 
-<% if new_item %>
+<% if local_assigns[:new_item] %>
   <%= render partial: 'items/form', locals: { item: new_item } %>
 <% end %>

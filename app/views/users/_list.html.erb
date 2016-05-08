@@ -1,0 +1,12 @@
+<% users.each do |user| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= user.email %>
+      </h4>
+      <small>
+        <%= render partial: 'items/items', locals: { items: user.items } %>
+      </small>
+    </div>
+  </div>
+<% end %>
