@@ -5,6 +5,7 @@
   <% if current_user == it.user %>
     <%= link_to "Complete Item", user_item_path(current_user,it), method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
   <% end %>
+  <%= distance_of_time_in_words(Time.now, it.created_at + 7.days) %> remaining
 </div>
 <% end %>
 
