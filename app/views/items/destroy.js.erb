@@ -1,0 +1,6 @@
+<% if @item.destroyed? %>
+  $('#item-<%= @item.id %>').hide();
+  $('.notice').html('<%= escape_javascript(flash[:notice]) %>');
+<% else %>
+  $('.alert').html('<%= escape_javascript(flash.now[:alert]) %>');
+<% end %>
